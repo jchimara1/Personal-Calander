@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="FXML_Controllers.CustomerController">
+    <children>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefWidth="789.0" style="-fx-background-color: green;" VBox.vgrow="ALWAYS">
+            <children>
+                <TableView fx:id="TableView_Customers" focusTraversable="false" layoutX="32.0" layoutY="75.0" onMouseClicked="#DisplayCustomerDataToTableview" prefHeight="204.0" prefWidth="837.0">
+                    <columns>
+                        <TableColumn fx:id="Customer_idColumn" prefWidth="76.0" text="ID" />
+                        <TableColumn fx:id="Customer_NameColumn" prefWidth="179.0" text="Name" />
+                        <TableColumn fx:id="Customer_AddressColumn" prefWidth="269.0" text="Address" />
+                        <TableColumn fx:id="Customer_DivisionColumn" prefWidth="68.0" text="Division ID" />
+                        <TableColumn fx:id="Customer_ZipCode" prefWidth="97.0" text="Postal Code" />
+                        <TableColumn fx:id="Customer_Phone" prefWidth="138.0" text="Phone" />
+                    </columns>
+                </TableView>
+                <Button fx:id="Add_Customer" focusTraversable="false" layoutX="32.0" layoutY="561.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="163.0" text="Add Customer" />
+                <Button fx:id="customerUpdateButton" disable="true" layoutX="341.0" layoutY="561.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="163.0" text="Update Customer" />
+                <Button fx:id="customerDeleteButton" disable="true" layoutX="651.0" layoutY="561.0" mnemonicParsing="false" onAction="#RemoveCustomer" prefHeight="25.0" prefWidth="163.0" text="Delete Customer" />
+                <TextField fx:id="customerNameTextField" focusTraversable="false" layoutX="451.0" layoutY="331.0" prefHeight="25.0" prefWidth="170.0" promptText="enter country" />
+                <TextField fx:id="customerAddressTextField" focusTraversable="false" layoutX="451.0" layoutY="386.0" prefHeight="25.0" prefWidth="170.0" promptText="enter address" />
+                <TextField fx:id="customerPostalCodeTextField" focusTraversable="false" layoutX="451.0" layoutY="445.0" prefHeight="25.0" prefWidth="170.0" promptText="enter postal code" />
+                <TextField fx:id="customerPhoneNumberTextField" focusTraversable="false" layoutX="337.0" layoutY="501.0" prefHeight="25.0" prefWidth="170.0" promptText="enter phone number" />
+                <Label layoutX="380.0" layoutY="390.0" text="Address:" textFill="#fcfafa" />
+                <Label layoutX="370.0" layoutY="449.0" text="Postal Code:" textFill="#fcfcfc" />
+                <Label layoutX="231.0" layoutY="505.0" text="Phone Number:" textFill="#fffdfd" />
+                <Label layoutX="33.0" layoutY="335.0" text="ID:" textFill="#f8f6f6" />
+                <TextField fx:id="customerIDTextField" disable="true" focusTraversable="false" layoutX="144.0" layoutY="331.0" prefHeight="25.0" prefWidth="170.0" promptText="auto-generated" />
+                <ComboBox fx:id="Division_Selection" focusTraversable="false" layoutX="146.0" layoutY="445.0" prefHeight="25.0" prefWidth="170.0" promptText="select first-level division" />
+                <ComboBox fx:id="Country_Selection" focusTraversable="false" layoutX="146.0" layoutY="386.0" onAction="#Divisions_toCombobox" prefHeight="25.0" prefWidth="170.0" promptText="select country" />
+                <Label layoutX="27.0" layoutY="449.0" text="First-Level Division:" textFill="#fcfafa" />
+                <Label layoutX="33.0" layoutY="390.0" text="Country:" textFill="#f5f3f3" />
+                <Label layoutX="384.0" layoutY="335.0" text="Name: " textFill="#fffafa" />
+                <Button fx:id="customerResetButton" disable="true" layoutX="680.0" layoutY="445.0" mnemonicParsing="false" onAction="#ClearCustomerFields" prefHeight="25.0" prefWidth="163.0" text="Reset Customer Data Boxes" wrapText="true" />
+                <Label layoutX="299.0" layoutY="2.0" prefHeight="70.0" prefWidth="294.0" style="-fx-background-color: white;" text="             Customer" textFill="#0e9007">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+            <Button layoutX="717.0" layoutY="399.0" mnemonicParsing="false" onAction="#Appointment" prefHeight="25.0" prefWidth="88.0" text="Appointment" />
+            <Button layoutX="717.0" layoutY="344.0" mnemonicParsing="false" onAction="#Reports" prefHeight="25.0" prefWidth="88.0" text="Reports" />
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

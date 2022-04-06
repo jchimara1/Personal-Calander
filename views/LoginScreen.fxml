@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML_Controllers.LoginController">
+    <children>
+        <Label layoutX="110.0" layoutY="39.0" text="Login To The Scheduler" textFill="#dd1b1b">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+        <Label layoutX="132.0" layoutY="129.0" prefHeight="35.0" prefWidth="115.0" text="Username">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <TextField fx:id="username" layoutX="298.0" layoutY="134.0" promptText="Enter Your Username " />
+        <PasswordField fx:id="password" layoutX="298.0" layoutY="183.0" promptText="Enter Your Password" />
+        <Label layoutX="136.0" layoutY="176.0" text="Password">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Button fx:id="LoginButton" layoutX="247.0" layoutY="247.0" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="65.0" text="Log in" AnchorPane.rightAnchor="288.0" />
+        <Label fx:id="location" text="Your Location is" />
+    </children>
+</AnchorPane>

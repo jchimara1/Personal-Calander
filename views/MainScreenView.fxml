@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="397.0" prefWidth="563.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="FXML_Controllers.MainScreenController">
+   <children>
+      <AnchorPane prefHeight="118.0" prefWidth="607.0">
+         <children>
+            <Label layoutY="2.0" prefHeight="109.0" prefWidth="607.0" text="   Daily Scheduler" textFill="#f0f0f0">
+               <font>
+                  <Font name="Leelawadee UI Semilight" size="75.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button layoutX="32.0" layoutY="175.0" mnemonicParsing="false" onAction="#Appointment" prefHeight="67.0" prefWidth="216.0" style="-fx-background-color: #2F4F4F;" text="View Appointments" textFill="#fcfaf8" />
+      <Button layoutX="311.0" layoutY="175.0" mnemonicParsing="false" onAction="#Customer" prefHeight="67.0" prefWidth="216.0" style="-fx-background-color: #2F4F4F;" text="View Customers" textFill="#fefeff" />
+      <Button layoutX="172.0" layoutY="279.0" mnemonicParsing="false" onAction="#Reports" prefHeight="67.0" prefWidth="216.0" style="-fx-background-color: brown;" text="View Reports" textFill="WHITE" />
+   </children>
+</AnchorPane>

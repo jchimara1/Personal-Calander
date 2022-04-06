@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="FXML_Controllers.ReportController">
+    <children>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: green;" VBox.vgrow="ALWAYS">
+            <children>
+                <TabPane layoutX="11.0" layoutY="78.0" prefHeight="395.0" prefWidth="878.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab fx:id="Appointment_CustomerTab" onSelectionChanged="#DisplayTotalAppointmentCount" text="Total Customer Appointments">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="878.0">
+                                    <children>
+                                        <TableView fx:id="Appointment_CustomerTableView" layoutX="108.0" layoutY="40.0" prefHeight="320.0" prefWidth="293.0">
+                                            <columns>
+                                                <TableColumn fx:id="Appointment_CustomerType" prefWidth="161.0" text="Appointment Type" />
+                                                <TableColumn fx:id="C_A_Type_Total" prefWidth="115.0" text="Total" />
+                                            </columns>
+                                        </TableView>
+                                        <TableView fx:id="Monthly_Customer_Appointment" layoutX="499.0" layoutY="41.0" prefHeight="319.0" prefWidth="271.0">
+                                            <columns>
+                                                <TableColumn fx:id="Customer_Appointment_Month_C" prefWidth="181.0" text="Appointment Month" />
+                                                <TableColumn fx:id="Customer_Appointment_Total_C" prefWidth="81.0" text="Total" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="FliterAppointmentTab" onSelectionChanged="#DisplayFliterContacts" text="Appointments Filtered by Contact">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <TableView fx:id="FliterAppointmentTableView" layoutY="41.0" prefHeight="324.0" prefWidth="878.0">
+                                            <columns>
+                                                <TableColumn fx:id="FliterAppointmentID" prefWidth="97.0" text="Appointment ID" />
+                                                <TableColumn fx:id="FliterAppointmentCustomer" prefWidth="185.0" text="Appointment Title" />
+                                                <TableColumn fx:id="FliterAppointmentType" prefWidth="115.0" text="Appointment Type" />
+                                                <TableColumn fx:id="FliterAppointmentDescription" prefWidth="160.0" text="Appointment Description" />
+                                                <TableColumn fx:id="FliterStart_Time" prefWidth="119.0" text="Start Date and Time" />
+                                                <TableColumn fx:id="Fliter_EndTime" prefWidth="111.0" text="End Date and Time" />
+                                                <TableColumn fx:id="FliterAppointmentCustomerID" prefWidth="76.0" text="Customer ID" />
+                                            </columns>
+                                        </TableView>
+                                        <ComboBox fx:id="FliterByContact" focusTraversable="false" layoutX="690.0" layoutY="8.0" onAction="#ShowFliterContact" prefWidth="150.0" promptText="Filter by Contact" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="Customer_Division_LevelTab" onSelectionChanged="#DisplayCustomerDivisons" text="Customer's Division Level">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <TableView fx:id="Customer_Division_TableView" layoutX="12.0" layoutY="45.0" prefHeight="288.0" prefWidth="859.0">
+                                            <columns>
+                                                <TableColumn fx:id="DivisionLevel" prefWidth="255.0" text="First-Level Division" />
+                                                <TableColumn fx:id="CustomerTableColumn" prefWidth="594.0" text="Customers" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                  <Tab fx:id="customerFirstLevelDivisionTab1" onSelectionChanged="#DisplayCustomerDivisons" text="Type and Month">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="Month_Report" layoutX="14.0" layoutY="14.0" prefHeight="384.0" prefWidth="860.0">
+                                 <columns>
+                                    <TableColumn fx:id="Type_A" prefWidth="304.0" text="Appointment Type " />
+                                    <TableColumn fx:id="Month_A" minWidth="0.0" prefWidth="139.0" text="Month" />
+                                    <TableColumn fx:id="Total_Appointment" minWidth="0.0" prefWidth="321.0" text="Total" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                    </tabs>
+                </TabPane>
+            <Button layoutX="718.0" layoutY="26.0" mnemonicParsing="false" onAction="#To_Appointment" prefHeight="25.0" prefWidth="168.0" text="Appointment" />
+            <Button layoutX="11.0" layoutY="26.0" mnemonicParsing="false" onAction="#Customer" prefHeight="25.0" prefWidth="187.0" text="Customer" />
+            <Label layoutX="289.0" layoutY="11.0" prefHeight="55.0" prefWidth="304.0" style="-fx-background-color: White;" text="                Reports" textFill="#347210">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
